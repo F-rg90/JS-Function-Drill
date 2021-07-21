@@ -7,3 +7,9 @@
 
 //return is a statement which lets a function return a value back to where it was called.
 // console.log lets us debug errors
+
+
+const checkPalindrome(str) {
+  return true;
+}
+palindrome("Radar");
