@@ -8,8 +8,21 @@
 //return is a statement which lets a function return a value back to where it was called.
 // console.log lets us debug errors
 
+//Palindrome
+//Write a function checkPalindromethat accepts a single argument, a string. The function should return true (Boolean) if the string is a palindrome, false if it is not. Make sure your function will give the correct answer for words with capital letters.
 
-const checkPalindrome(str) {
-  return true;
+function palindrome(str) {
+  var re = /[\W_]/g;
+  var lowRegStr = str.toLowerCase().replace(re, '');
+  var reverseStr = lowRegStr.split('').reverse().join(''); 
+  return reverseStr === lowRegStr;
 }
-palindrome("Radar");
+alert(palindrome("Radar"));
+
+function palindrome(str) {
+  var re = /[\W_]/g;
+  var lowRegStr = str.toLowerCase().replace(re, '');
+  var reverseStr = lowRegStr.split('').reverse().join(''); 
+  return reverseStr === lowRegStr;
+}
+alert(palindrome("Borscht"));
