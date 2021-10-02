@@ -26,3 +26,11 @@ function palindrome(str) {
   return reverseStr === lowRegStr;
 }
 alert(palindrome("Borscht"));
+
+//Sum Array
+//Write a function sumArraythat takes an array as an argument. The array should contain numbers. The function should return the sum of the numbers in the array. Use a for loop within the function to iterate over the array and sum the contents. Use a variable such as
+
+const sumArray = [1,2,3,4,5,6].reduce((partial_sum, a) => partial_sum + a,0); 
+console.log(sumArray);
+
+
