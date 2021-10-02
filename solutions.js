@@ -71,3 +71,48 @@ function printPrimes(max) {
 }
 
 console.log(printPrimes(100))
+
+
+
+// Rock Paper Scissors
+// Create the rock paper scissors game for the console! Rock paper scissors is a game of chance where two players throw out one of the three options, rock, paper, or scissors. To determine who wins, use the following guidelines: rock beats scissors, scissors beats paper, paper beats rock.
+
+// Write a function called randomMovethat returns a randomly chosen move (rock, paper, or scissors).
+// Then create a function called rockPaperScissorsthat runs one round of the game. It should accept two arguments, the computer's move and the user's move, and somehow compare the two to decide who the winner is and return who won.
+
+
+let computerScore = 0, humanScore = 0
+
+let rockPaperScissors = prompt("rock, paper, scissors")
+
+console.log("human chose ", rockPaperScissors)
+
+let options = ["rock", "paper", "scissors"]
+
+let randomMove = options[Math.floor(Math.random() * options.length)]
+
+console.log("computer chose ", randomMove)
+
+if (rockPaperScissors == "rock" && randomMove == "paper") {
+
+console.log("paper beats rock! You lost this round.");
+
+computerScore += 1;
+
+console.log("Computer: " + computerScore + " You: " + humanScore);
+
+} else if (rockPaperScissors == "rock" && randomMove == "scissors") {
+
+console.log("rock beats scissors! You won this round.");
+
+humanScore += 1;
+
+console.log("Computer: " + computerScore + " You: " + humanScore);
+
+} else if (rockPaperScissors == "rock" && randomMove == "rock") {
+
+console.log("There was a tie");
+
+console.log("Computer: " + computerScore + " You: " + humanScore);
+
+}
